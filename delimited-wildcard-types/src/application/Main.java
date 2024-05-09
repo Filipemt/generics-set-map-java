@@ -31,9 +31,9 @@ public class Main {
     }
      */
 
-
-         // Princípio get/put - Covariância
-         // Quando o GET é permitido mas o PUT não é permitido
+        /*
+         Princípio get/put - Covariância
+         Quando o GET é permitido mas o PUT não é permitido
 
         List<Integer> intList = new ArrayList<>();
         intList.add(10);
@@ -45,6 +45,21 @@ public class Main {
 
         list.add(20); // Erro de compilação
 
+        */
 
+
+         // Princípio get/put - Contravariância
+         // Quando o PUT é permitido mas o GET não é permitido
+
+        List<Object> myObjs = new ArrayList<>();
+        myObjs.add("Maria");
+        myObjs.add("Filipe");
+
+        List<? super Number> myNums = myObjs;
+
+        myNums.add(10);
+        myNums.add(3.14);
+
+        Number x = myNums.get(0); // Erro de compilação
     }
 }
