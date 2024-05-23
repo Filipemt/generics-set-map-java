@@ -21,7 +21,7 @@ public class Main {
         }
 
         System.out.print("How many students for course B? ");
-         n = sc.nextInt();
+        n = sc.nextInt();
 
         for (int i=0; i<n; i++) {
             int numberStudentsB = sc.nextInt();
@@ -29,7 +29,7 @@ public class Main {
         }
 
         System.out.print("How many students for course C? ");
-         n = sc.nextInt();
+        n = sc.nextInt();
 
         for (int i=0; i<n; i++) {
             int numberStudentsC = sc.nextInt();
