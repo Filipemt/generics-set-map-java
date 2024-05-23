@@ -1,31 +1,27 @@
 package application;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+import model.entities.Product;
+
+import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
+
 
 public class Main {
     public static void main(String[] args) {
 
-    Map<String, String> cookies = new TreeMap<>();
+        Map<Product, Double> stock = new HashMap<>();
 
-    cookies.put("username", "Filipe Mota");
-    cookies.put("email", "filipe@gmail.com");
-    cookies.put("phone", "993679805");
+        Product p1 = new Product("Tv", 900.0);
+        Product p2 = new Product("Notebook", 1200.0);
+        Product p3 = new Product("Tablet", 400.0);
 
-    cookies.remove("email");
-    cookies.put("phone", "992691019");
+        stock.put(p1, 10000.0);
+        stock.put(p2, 20000.0);
+        stock.put(p3, 15000.0);
 
-        System.out.println("Contains 'phone' key: " + cookies.containsKey("phone"));
-        System.out.println("Phone number: " + cookies.get("phone"));
-        System.out.println("Email: " + cookies.get("email"));
-        System.out.println("Size: " + cookies.size());
+        Product ps = new Product("Tv", 900.0);
 
-    System.out.println("All Cookies: ");
-
-    for (String key : cookies.keySet()) {
-            System.out.println(key + ": " + cookies.get(key) );
-    }
+        System.out.println("Contains 'ps' key: " + stock.containsKey(ps));
 
     }
 }
