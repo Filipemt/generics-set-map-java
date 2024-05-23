@@ -2,20 +2,23 @@ package application;
 
 import model.entities.Product;
 
-import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
 
-            Set<Product> set = new HashSet<>();
+        // A classe do conjunto TreeSet precisa ser uma implementação do Comparable para que o TreeSet possa ordenar os objetos
 
-            set.add(new Product("TV", 900.0));
-            set.add(new Product("Notebook", 1200.0));
-            set.add(new Product("Tablet", 400.0));
+        Set<Product> set = new TreeSet<>();
 
-            Product prod = new Product("Notebook", 1200.0);
-            System.out.println(set.contains(prod));
+        set.add(new Product("Tv", 900.0));
+        set.add(new Product("Notebook", 1200.0));
+        set.add(new Product("Tablet", 400.0));
+
+        for (Product p : set) {
+            System.out.println(p);
+        }
 
     }
 }
